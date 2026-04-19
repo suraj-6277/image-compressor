@@ -1,0 +1,7 @@
+node_modules
+dist
+.env
+backend/uploads/original/*
+backend/uploads/compressed/*
+!backend/uploads/original/.gitkeep
+!backend/uploads/compressed/.gitkeep
