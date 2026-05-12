@@ -15,6 +15,10 @@
     {
       "src": "/api/(.*)",
       "dest": "/backend/api.js"
+    },
+    {
+      "src": "/(?!api)(.*)",
+      "dest": "/frontend/dist/index.html"
     }
   ]
 }
