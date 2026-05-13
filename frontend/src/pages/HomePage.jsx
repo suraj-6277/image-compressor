@@ -5,6 +5,7 @@ import ResultStats from "../components/ResultStats";
 import Toast from "../components/Toast";
 import Footer from "../components/Footer";
 import { compressImageApi, getDownloadUrl, uploadImageApi } from "../services/api";
+import logo from "../assets/logo.svg";
 
 const MAX_SIZE_BYTES = 5 * 1024 * 1024;
 const allowedTypes = ["image/jpeg", "image/jpg", "image/png", "image/webp"];
@@ -67,8 +68,11 @@ const HomePage = () => {
       <Toast toast={toast} onClose={() => setToast(null)} />
       <div className="mx-auto max-w-5xl space-y-6">
         <header className="text-center">
-          <h1 className="text-3xl font-semibold text-slate-900">Image Compressor</h1>
-          <p className="mt-2 text-sm text-slate-500">Upload, compress, and download optimized images quickly.</p>
+          <div className="mx-auto mb-4 flex h-24 w-24 items-center justify-center rounded-3xl bg-white p-3 shadow-sm ring-1 ring-slate-200">
+            <img src={logo} alt="Image Compressor logo" className="h-16 w-16 object-contain" />
+          </div>
+          <h1 className="text-4xl font-semibold text-slate-900 sm:text-5xl">Image Compressor</h1>
+          <p className="mt-3 text-base text-slate-500">Upload, compress, and download optimized images quickly.</p>
         </header>
 
         <section className="rounded-xl bg-white p-5 shadow-sm ring-1 ring-slate-200">
